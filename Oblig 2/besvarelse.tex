@@ -1,0 +1,102 @@
+\documentclass[a4paper,10pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,graphicx,varioref,verbatim,amsfonts,geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{bm}
+
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1.5mm}
+
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+\usepackage{listings}
+
+\lstdefinelanguage{python}
+{
+	morekeywords={print,abs,for,def,if,while,do,break,return,from,import,try,except,else,elif},
+	sensitive=false,
+	morecomment=[l]{\#}
+}
+
+\lstset{language=python,
+	backgroundcolor=\color[rgb]{.95,.95,.95},
+	numbers=left,xleftmargin=10pt,
+	numberstyle=\tiny,stepnumber=1,numbersep=5pt,
+	stringstyle=\color{red},
+	basicstyle=\footnotesize \ttfamily,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green},
+	basewidth=0.60em,
+	showstringspaces=false,
+	captionpos=b,
+	frame=single
+}
+
+% \renewcommand{\thesubsection}{\roman{subsection}}
+% \renewcommand{\thesection}{\alph{section}}
+\renewcommand{\thesubsection}{\alph{subsection}}
+
+\title{MAT1110 - Mandatory assignment 2}
+\author{William Dugan}
+
+\begin{document}
+
+\maketitle
+
+\section{} \label{1}
+
+\subsection{} \label{1a}
+
+We have
+\begin{align}
+    \bm{F} (x, y) = - \frac{y}{2} \bm{i} + \frac{x}{2} \bm{j}
+\end{align}
+and the parameterization $\bm{r}$ of $C$ oriented counter-clockwise. If follows that $\bm{r}$ is piecewise smooth as $C$ is piecewise smooth. Since $C$ encloses an area including $R$, and the partial derivatives of $\bm{F}$ are continuous, we can use Greens' theorem two write the area enclosed by $C$ as
+\begin{align*}
+    \iint_R \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dA 
+    = \oint_C \bm{F} \cdot d\bm{r}
+\end{align*}
+
+\subsection{} \label{1b}
+Since $C_k$ is the line piece connecting the points $(a_k, b_k)$ and $(a_{k+1}, b_{k+1})$ can we write \newline $\Delta x = a_{k+1} - a_k$ and $\Delta y = b_{k+1} - b_k$ from the point $(a_k, b_k)$. The change will be linear as $C_k$ are straight lines. If we put all this together, we get the parameterization
+\begin{align}
+    &\bm{r}_k (t) = 
+    (a_k + t (a_{k+1} - a_k)), b_k + t (b_{k+1} - b_k)), 
+    & &t \in [0, 1]
+\end{align}
+
+\subsection{} \label{1c}
+\begin{align*}
+    A_k = \int_{C_k} \bm{F} \cdot d\bm{r} = \int_{C_k} x dy
+\end{align*}
+If we use $x = a_k + t (a_{k+1} - a_k)$ and $dx = ( b_{k+1} - b_k) dt$ we get
+\begin{align*}
+    A_k &= (b_{k+1} - b_k) \int_0^1 (a_k + t (a_{k+1} - a_k)) dt \\
+    &= (b_{k+1} - b_k) \left[ ta_k + \frac{1}{2} t^2 (a_{k+1} - a_k) \right]_0^1 \\
+    &= \frac{1}{2} (a_{k+1} + a_k)(b_{k+1} - b_k)
+\end{align*}
+If we sum over all line-pieces we get
+\begin{align} \label{eq:sum}
+    A = \frac{1}{2} \sum_{k=1}^{n-1} (a_{k+1} + a_k)(b_{k+1} - b_k)
+\end{align}
+
+\subsection{} \label{1d}
+We will now calculate the area of a triangle with corners $(0, 0), (a, h)$ and $(g, 0)$ using equation \ref{eq:sum}.
+\begin{align*}
+    A_{\text{triangle}} &= \frac{1}{2} [(g-0)(0-0) + (a+g)(h-0) + (0+a)(0-h)] \\
+    &= \frac{1}{2} [ah + gh - ah] \\
+    &= \frac{gh}{2}
+\end{align*}
+
+For a rectangle with corners $(0, 0), (g, 0), (g, h)$ and $(0, h)$ we get
+\begin{align*}
+    A_{\text{rectangle}} &= \frac{1}{2} [(g+0)(0-0) + (g+g)(h-0) + (0+g)(h-h) + (0+0)(0-h)] \\
+    &= \frac{1}{2} [2gh] \\
+    &= gh.
+\end{align*}
+
+\end{document}
