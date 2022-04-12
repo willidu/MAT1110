@@ -99,4 +99,40 @@ For a rectangle with corners $(0, 0), (g, 0), (g, h)$ and $(0, h)$ we get
     &= gh.
 \end{align*}
 
+\section{} \label{2}
+
+\newpage
+
+\section{} \label{3}
+We define $f: \mathbb{R}^2 \to \mathbb{R}^2$ where $f(\bm{v}) = A \bm{v} + \bm{b}$.
+
+\subsection{} \label{3a}
+We let $f$ be an isometry in the xy-plane. It is easy to show that $f$ preserves norms:
+\begin{align*}
+    ||\bm{v} - \bm{w}|| &= ||f(\bm{v}) - f(\bm{w}))|| \\
+    &= ||A\bm{v} + \bm{b} - (A\bm{w} + \bm{b})|| \\
+    &= ||A\bm{v} - A\bm{w}|| \\
+    &= ||A|| \cdot ||\bm{v} - \bm{w}|| \\
+    &= ||\bm{v} - \bm{w}||
+\end{align*}
+where we have used that det$(A)=\pm 1$.
+
+\subsection{} \label{3b}
+We let $f(\bm{v}) = A \bm{v} + \bm{b}$ be an isometry with det$(A)=-1$. The vector $A \bm{b} + \bm{b}$ is an eigenvector if $(A-I)(A \bm{b} + \bm{b}) = 0$ for all choises of $\bm{b}$. Remembering that $A^2 = I$, we get
+\begin{align*}
+    (A-I)(A \bm{b} + \bm{b}) &= A^2 \bm{b} + A \bm{b} - AI \bm{b} - I \bm{b} = 0
+\end{align*}
+which shows that $A \bm{b} + \bm{b}$ is an eigenvector.
+
+\subsection{} \label{3c}
+The transformation by $f$ on the line perpendicular to $\bm{w}$ is
+\begin{align*}
+    f(s\bm{w}) = s A \bm{w} + \bm{b}, \hspace{1cm} s \in \mathbb{R}
+\end{align*}
+Since $\bm{w}$ is an eigenvector $A \bm{w} = \lambda \bm{w}$. Remembering that $\lambda = 1$, we can then scale the transformation down by a half, and get
+\begin{align} \label{eq:line}
+    t \bm{w} + \frac{1}{2} \bm{b}, \hspace{1cm} t \in \mathbb{R}
+\end{align}
+where we let $t = s/2$. This shows that $f$ transforms the line in eq \ref{eq:line} on itself.
+
 \end{document}
