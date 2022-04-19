@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.6)  12 APR 2022 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.6)  19 APR 2022 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -426,22 +426,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Administrator/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] [2] [3] (besvarelse.aux)
+{C:/Users/Administrator/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}] [2] [3]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 182.
+ (oppg2.py) [4] [5] (besvarelse.aux)
 Package rerunfilecheck Info: File `besvarelse.out' has not changed.
-(rerunfilecheck)             Checksum: 8B7DA50A2FCEF4C4AFD54657A349AACE;449.
+(rerunfilecheck)             Checksum: 3A3BA9FDF15365D31053A95A75830ED6;599.
  ) 
 Here is how much of TeX's memory you used:
- 12847 strings out of 480516
- 203395 string characters out of 2894878
- 531642 words of memory out of 3000000
- 30582 multiletter control sequences out of 15000+600000
- 482033 words of font info for 75 fonts, out of 8000000 for 9000
+ 13189 strings out of 480516
+ 206299 string characters out of 2894878
+ 546727 words of memory out of 3000000
+ 30884 multiletter control sequences out of 15000+600000
+ 482201 words of font info for 76 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 60i,11n,63p,391b,347s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on besvarelse.pdf (3 pages, 149231 bytes).
+ 60i,15n,63p,391b,1114s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Administrator/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on besvarelse.pdf (5 pages, 203690 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

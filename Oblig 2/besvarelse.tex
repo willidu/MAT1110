@@ -70,10 +70,10 @@ Since $C_k$ is the line piece connecting the points $(a_k, b_k)$ and $(a_{k+1}, 
 \end{align}
 
 \subsection{} \label{1c}
-\begin{align*}
-    A_k = \int_{C_k} \bm{F} \cdot d\bm{r} = \int_{C_k} x dy
-\end{align*}
-If we use $x = a_k + t (a_{k+1} - a_k)$ and $dx = ( b_{k+1} - b_k) dt$ we get
+\begin{align}
+    A_k = \int_{C_k} x dy
+\end{align}
+If we use $x = a_k + t (a_{k+1} - a_k)$ and $dy = ( b_{k+1} - b_k) dt$ we get
 \begin{align*}
     A_k &= (b_{k+1} - b_k) \int_0^1 (a_k + t (a_{k+1} - a_k)) dt \\
     &= (b_{k+1} - b_k) \left[ ta_k + \frac{1}{2} t^2 (a_{k+1} - a_k) \right]_0^1 \\
@@ -81,7 +81,7 @@ If we use $x = a_k + t (a_{k+1} - a_k)$ and $dx = ( b_{k+1} - b_k) dt$ we get
 \end{align*}
 If we sum over all line-pieces we get
 \begin{align} \label{eq:sum}
-    A = \frac{1}{2} \sum_{k=1}^{n-1} (a_{k+1} + a_k)(b_{k+1} - b_k)
+    A = \frac{1}{2} \sum_{k=1}^{n-1} (a_{k+1} + a_k)(b_{k+1} - b_k) 
 \end{align}
 
 \subsection{} \label{1d}
@@ -99,7 +99,89 @@ For a rectangle with corners $(0, 0), (g, 0), (g, h)$ and $(0, h)$ we get
     &= gh.
 \end{align*}
 
+\newpage
+
 \section{} \label{2}
+
+\subsection{} \label{2a}
+We let 
+\begin{align}
+    A = 
+    \begin{pmatrix}
+        \frac{1}{\sqrt 3} & \frac{1}{\sqrt 2} & \frac{1}{\sqrt 6} \\
+        - \frac{1}{\sqrt 3} & \frac{1}{\sqrt 2} & - \frac{1}{\sqrt 6} \\
+        \frac{1}{\sqrt 3} & 0 & - \frac{2}{\sqrt 6}
+    \end{pmatrix}
+\end{align}
+and $(x, y, z)$ be a point on the unit shpere. In other words, $x^2 + y^2 + z^2 = 1$. We introduce the variable
+\begin{align*}
+    \bm{u} = A 
+    \begin{pmatrix}
+        x\\ 
+        y\\ 
+        z
+    \end{pmatrix}.
+\end{align*}
+To show that $\bm{u}$ is a point on the unit shpere, we need $|\bm{u}|=1$.
+
+\begin{align*}
+    |\bm{u}| &= 
+    \left( 
+        \frac{x}{\sqrt 3} + \frac{y}{\sqrt 2} + \frac{z}{\sqrt6}
+    \right)^2
+    + \left( 
+        - \frac{x}{\sqrt 3} + \frac{y}{\sqrt 2} - \frac{z}{\sqrt6}
+    \right)^2
+    + \left( 
+        \frac{x}{\sqrt 3} + \frac{z}{\sqrt6}
+    \right)^2 \\
+    &= \frac{x^2}{3} + \frac{y^2}{2} + \frac{z^2}{6}
+    + \frac{x^2}{3} + \frac{y^2}{2} + \frac{z^2}{6}
+    + \frac{x^2}{3} + \frac{4z^2}{6} 
+    \hspace{0.5cm} \text{(Canceling like terms)}\\
+    &= x^2 + y^2 + z^2 \\
+    &= 1
+\end{align*}
+
+\subsection{} \label{2b}
+
+We let
+\begin{align}
+    B = 
+    \begin{pmatrix}
+        \frac{1}{6} & - \frac{1}{6} & 0 \\
+        - \frac{1}{6} & \frac{1}{2} & \frac{2}{3} \\
+        0 & \frac{1}{6} & - \frac{1}{6}
+    \end{pmatrix}
+\end{align}
+and
+\begin{align}
+    \bm{F} \begin{pmatrix}
+        x \\ y \\ z
+    \end{pmatrix}
+    = B
+    \begin{pmatrix}
+        x \\ y \\ z
+    \end{pmatrix}
+    + \begin{pmatrix}
+        1 \\ 0 \\ 1
+    \end{pmatrix}.
+\end{align}
+
+We define $\{ \bm{v}_n \}$ such that $\bm{v}_{n+1} = \bm{F}(\bm{v}_n)$ and $\lim_{x \to \infty} \bm{v}_n = \bm{v}$. 
+\begin{align*}
+    \bm{F}(\bm{v}) = \lim_{x \to \infty} \bm{F}(\bm{v}_n) 
+    = \lim_{x \to \infty} \bm{v}_n = \bm{v}
+\end{align*}
+Since $\{ \bm{v}_n \}$ converges towards $\bm{v}$, $\bm{v}$ is a fixpoint for $\bm{F}$.
+
+\newpage
+
+\subsection{} \label{2c}
+Since $\{\bm{F(x_{\text{n}})}\}$ converges for all $\bm{x_0}$, we start with the zero vector for convenience.
+\lstinputlisting{oppg2.py}
+
+The program shows that the vector $(1, 1, 1)$ is a fixpoint for $\bm{F}$.
 
 \newpage
 
@@ -109,11 +191,11 @@ We define $f: \mathbb{R}^2 \to \mathbb{R}^2$ where $f(\bm{v}) = A \bm{v} + \bm{b
 \subsection{} \label{3a}
 We let $f$ be an isometry in the xy-plane. It is easy to show that $f$ preserves norms:
 \begin{align*}
-    ||\bm{v} - \bm{w}|| &= ||f(\bm{v}) - f(\bm{w}))|| \\
-    &= ||A\bm{v} + \bm{b} - (A\bm{w} + \bm{b})|| \\
-    &= ||A\bm{v} - A\bm{w}|| \\
-    &= ||A|| \cdot ||\bm{v} - \bm{w}|| \\
-    &= ||\bm{v} - \bm{w}||
+    |\bm{v} - \bm{w}| &= |f(\bm{v}) - f(\bm{w})| \\
+    &= |A\bm{v} + \bm{b} - (A\bm{w} + \bm{b})| \\
+    &= |A\bm{v} - A\bm{w}| \\
+    &\leq |A| \cdot |\bm{v} - \bm{w}| \\
+    &= |\bm{v} - \bm{w}|
 \end{align*}
 where we have used that det$(A)=\pm 1$.
 
