@@ -55,11 +55,12 @@ We have
 \begin{align}
     \bm{F} (x, y) = - \frac{y}{2} \bm{i} + \frac{x}{2} \bm{j}
 \end{align}
-and the parameterization $\bm{r}$ of $C$ oriented counter-clockwise. If follows that $\bm{r}$ is piecewise smooth as $C$ is piecewise smooth. Since $C$ encloses an area including $R$, and the partial derivatives of $\bm{F}$ are continuous, we can use Greens' theorem two write the area enclosed by $C$ as
+and the parameterization $\bm{r}$ of $C$ oriented clockwise. If follows that $\bm{r}$ is piecewise smooth as $C$ is piecewise smooth. Since $C$ encloses an area including $R$, and the partial derivatives of $\bm{F}$ are continuous, we can use Greens' theorem two write the area enclosed by $C$ as
 \begin{align*}
-    \iint_R \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dA 
-    = \oint_C \bm{F} \cdot d\bm{r}
+    \iint_R \Big| \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right) dA \Big|
+    = \oint_C | \bm{F} \cdot d\bm{r} |
 \end{align*}
+where we take the absolute value since Green's theorem uses a counter-clockwise parameterization.
 
 \subsection{} \label{1b}
 Since $C_k$ is the line piece connecting the points $(a_k, b_k)$ and $(a_{k+1}, b_{k+1})$ can we write \newline $\Delta x = a_{k+1} - a_k$ and $\Delta y = b_{k+1} - b_k$ from the point $(a_k, b_k)$. The change will be linear as $C_k$ are straight lines. If we put all this together, we get the parameterization
@@ -81,7 +82,7 @@ If we use $x = a_k + t (a_{k+1} - a_k)$ and $dy = ( b_{k+1} - b_k) dt$ we get
 \end{align*}
 If we sum over all line-pieces we get
 \begin{align} \label{eq:sum}
-    A = \frac{1}{2} \sum_{k=1}^{n-1} (a_{k+1} + a_k)(b_{k+1} - b_k) 
+    A = \frac{1}{2} \sum_{k=1}^{n} (a_{k+1} + a_k)(b_{k+1} - b_k) 
 \end{align}
 
 \subsection{} \label{1d}
