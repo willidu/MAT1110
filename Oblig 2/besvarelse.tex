@@ -91,7 +91,7 @@ If we sum over all line-pieces we get
 \subsection{} \label{1d}
 We will now calculate the area of a triangle with corners $(0, 0), (a, h)$ and $(g, 0)$ using equation \ref{eq:sum}.
 \begin{align*}
-    A_{\text{triangle}} &= \frac{1}{2} [(g-0)(0-0) + (a+g)(h-0) + (0+a)(0-h)] \\
+    A_{\text{triangle}} &= \frac{1}{2} [(g+0)(0-0) + (a+g)(h-0) + (0+a)(0-h)] \\
     &= \frac{1}{2} [ah + gh - ah] \\
     &= \frac{gh}{2}
 \end{align*}
@@ -130,19 +130,19 @@ To show that $\bm{u}$ is a point on the unit shpere, we need $|\bm{u}|=1$.
 
 \begin{align*}
     |\bm{u}| &= 
-    \left( 
+    \left[ \left( 
         \frac{x}{\sqrt 3} + \frac{y}{\sqrt 2} + \frac{z}{\sqrt6}
-    \right)^2
+    \right)^2 
     + \left( 
         - \frac{x}{\sqrt 3} + \frac{y}{\sqrt 2} - \frac{z}{\sqrt6}
     \right)^2
     + \left( 
-        \frac{x}{\sqrt 3} + \frac{z}{\sqrt6}
-    \right)^2 \\
-    &= \frac{x^2}{3} + \frac{y^2}{2} + \frac{z^2}{6}
+        \frac{x}{\sqrt 3} - \frac{2z}{\sqrt6}
+    \right)^2 \right]^{\frac{1}{2}}\\
+    &= \left[ \frac{x^2}{3} + \frac{y^2}{2} + \frac{z^2}{6}
     + \frac{x^2}{3} + \frac{y^2}{2} + \frac{z^2}{6}
-    + \frac{x^2}{3} + \frac{4z^2}{6} 
-    \hspace{0.5cm} \text{(Canceling like terms)}\\
+    + \frac{x^2}{3} + \frac{4z^2}{6} \right]^{\frac{1}{2}} \text{(Canceling like terms)}\\
+    &= \left[ x^2 + y^2 + z^2 \right]^{\frac{1}{2}} \\
     &= x^2 + y^2 + z^2 \\
     &= 1
 \end{align*}
